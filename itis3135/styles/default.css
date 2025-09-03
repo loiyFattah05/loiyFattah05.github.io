@@ -1,0 +1,110 @@
+:root {
+    --bg: #0f172a;
+    /* page background */
+    --paper: #ffffff10;
+    /* translucent card */
+    --border: #ffffff1a;
+    --ink: #e5e7eb;
+    /* base text */
+    --accent: #8b5cf6;
+    /* purple accent */
+    --muted: #94a3b8;
+    /* footer text */
+    --link: #ffd166;
+    /* link color */
+    --link-visited: #ffb703;
+    --footer-link: #a3e635;
+    --footer-visited: #84cc16;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+}
+
+.skip {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: .5rem;
+    background: #111827;
+    color: #fff;
+}
+
+header,
+main,
+footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin: .5rem 0 0
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin: 1rem 0 .25rem;
+    color: var(--accent);
+}
+
+nav a {
+    color: var(--link);
+    text-decoration: none;
+    padding: .15rem .25rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a:visited {
+    color: var(--link-visited);
+}
+
+.sep {
+    color: #64748b;
+    padding: 0 .25rem
+}
+
+main {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: .5rem;
+}
+
+footer {
+    font-size: .95rem;
+    color: var(--muted);
+}
+
+footer a {
+    color: var(--footer-link);
+}
+
+footer a:visited {
+    color: var(--footer-visited);
+}

@@ -1,131 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Personal home page for Loiy Abdul-Fattah — projects, coursework, and professional profiles." />
+  <meta name="description"
+    content="Personal home page for Loiy Abdul-Fattah — projects, coursework, and professional profiles." />
 
-  <!-- Title is auto-set from the h1 + h2 in the body via a tiny script at the end -->
   <title>Loiy Abdul-Fattah | Personal Home Page</title>
 
-  <!-- Embedded CSS -->
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700;800&display=swap");
 
-    :root{
-      /* Keep your Coolors link here for reference:
-         Example: https://coolors.co/0b1020-0f172a-e5e7eb-60a5fa-22c55e-f59e0b */
+    :root {
       --bg: #f7f7fb;
       --card: #ffffff;
       --text: #0f172a;
       --muted: #475569;
       --accent: #2563eb;
-      --ring: rgba(37,99,235,.15);
-      --shadow: 0 10px 30px rgba(2,6,23,.06);
+      --ring: rgba(37, 99, 235, .15);
+      --shadow: 0 10px 30px rgba(2, 6, 23, .06);
     }
-    @media (prefers-color-scheme: dark){
-      :root{
+
+    @media (prefers-color-scheme: dark) {
+      :root {
         --bg: #0b1020;
         --card: #0f172a;
         --text: #e5e7eb;
         --muted: #94a3b8;
         --accent: #60a5fa;
-        --ring: rgba(96,165,250,.25);
-        --shadow: 0 10px 30px rgba(0,0,0,.4);
+        --ring: rgba(96, 165, 250, .25);
+        --shadow: 0 10px 30px rgba(0, 0, 0, .4);
       }
     }
 
-    html,body{height:100%;}
-    body{
-      margin:0;
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--text);
       background: var(--bg);
       line-height: 1.6;
     }
-    .wrapper{
-      width: min(95%, 960px);     /* width 80–95%, max-width 600–1000px */
+
+    .wrapper {
+      width: min(95%, 960px);
       max-width: 960px;
-      margin: 0 auto;             /* centers content */
+      margin: 0 auto;
       padding: 24px;
     }
 
-    header{ margin: 12px 0 28px; }
-    header .brand{ display:flex; align-items:center; gap:16px; }
-    header .brandmark{
-      width:56px; height:56px; border-radius:50%;
-      object-fit:cover; box-shadow: var(--shadow);
+    header {
+      margin: 12px 0 28px;
     }
-    h1{
+
+    header .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    header .brandmark {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+    }
+
+    h1 {
       font-family: Poppins, Inter, sans-serif;
       font-weight: 800;
       font-size: clamp(1.75rem, 2.4vw + 1rem, 2.5rem);
       letter-spacing: -0.02em;
       margin: 0;
     }
-    .tagline{ margin:6px 0 0; color: var(--muted); font-size: .95rem; }
 
-    main{ display:grid; gap:20px; }
-    h2{
+    .tagline {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    main {
+      display: grid;
+      gap: 20px;
+    }
+
+    h2 {
       font-family: Poppins, Inter, sans-serif;
       font-weight: 700;
       font-size: clamp(1.25rem, 1.2vw + 1rem, 1.6rem);
       margin: 0;
     }
-    .card{
+
+    .card {
       background: var(--card);
       border-radius: 16px;
       padding: 18px 20px;
       box-shadow: var(--shadow);
-      border: 1px solid rgba(0,0,0,.04);
+      border: 1px solid rgba(0, 0, 0, .04);
     }
-    p{ margin: 0 0 12px; }
 
-    .actions{ display:flex; gap:12px; flex-wrap:wrap; margin-top: 4px; }
-    .btn{
-      display:inline-block; padding:10px 14px; border-radius:999px;
-      border:1px solid transparent; text-decoration:none; font-weight:600;
+    p {
+      margin: 0 0 12px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      font-weight: 600;
       transition: transform .06s ease, box-shadow .2s ease;
     }
-    .btn:focus-visible{ outline: none; box-shadow: 0 0 0 6px var(--ring); }
-    .btn-primary{ background: var(--accent); color: #fff; }
-    .btn-ghost{ background: transparent; border-color: currentColor; color: var(--accent); }
 
-    a{ color: var(--accent); text-decoration: none; }
-    a:hover{ text-decoration: underline; }
+    .btn:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 6px var(--ring);
+    }
 
-    footer{
-      margin-top: 28px; padding-top: 16px;
-      border-top: 1px solid rgba(0,0,0,.08);
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border-color: currentColor;
+      color: var(--accent);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(0, 0, 0, .08);
       color: var(--muted);
     }
-    .footer-nav{
-      list-style: none; padding: 0; margin: 0;
-      display:flex; flex-wrap:wrap; gap:8px;
-    }
-    .footer-nav li{ display:inline; }
-    .footer-nav li+li::before{ content:" ~ "; color: var(--muted); }
-    .legal{ margin-top: 10px; font-size: .9rem; }
 
-    .skip-link{
-      position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+    .footer-nav {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
     }
-    .skip-link:focus{
-      position:static; width:auto; height:auto; padding:8px 12px; background: var(--card);
-      border-radius: 8px; box-shadow: var(--shadow);
+
+    .footer-nav li {
+      display: inline;
+    }
+
+    .footer-nav li+li::before {
+      content: " ~ ";
+      color: var(--muted);
+    }
+
+    .legal {
+      margin-top: 10px;
+      font-size: .9rem;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    .skip-link:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      padding: 8px 12px;
+      background: var(--card);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
     }
   </style>
 
-  <!-- ✅ Accumulus validator placed at the end of <head> as requested -->
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <div class="wrapper">
     <header>
       <div class="brand">
-        <!-- Optional brand image -->
         <img class="brandmark" src="itis3135/images/profile.jpg" alt="Portrait of Loiy Abdul-Fattah" loading="lazy" />
         <div>
           <h1>Loiy Abdul-Fattah</h1>
@@ -138,7 +223,7 @@
       <h2>Personal Home Page</h2>
       <p>
         Welcome! I am a CS student concentrating in Cyber Security going into my third year at UNCC.
-        
+
       </p>
       <p>
         This site is my hub: quick links to coursework, GitHub, and professional profiles.
@@ -147,7 +232,8 @@
 
       <div class="actions">
         <a class="btn btn-primary" href="mailto:labdulfa@charlotte.edu">Email Me</a>
-        <a class="btn btn-ghost" href="itis3135/components/Resume.pdf" target="_blank" rel="noopener">View Résumé (PDF)</a>
+        <a class="btn btn-ghost" href="itis3135/components/Resume.pdf" target="_blank" rel="noopener">View Résumé
+          (PDF)</a>
       </div>
     </main>
 
@@ -156,9 +242,11 @@
         <ul class="footer-nav">
           <li><a href="https://github.com/loiyFattah05" target="_blank" rel="noopener">GitHub.com</a></li>
           <li><a href="https://webpages.charlotte.edu/labdulfa/" target="_blank" rel="noopener">CLT Web</a></li>
-          <li><a href="https://github.com/loiyFattah05/loiyFattah05.github.io" target="_blank" rel="noopener">GitHub.io</a></li>
+          <li><a href="https://github.com/loiyFattah05/loiyFattah05.github.io" target="_blank"
+              rel="noopener">GitHub.io</a></li>
           <li><a href="itis3135/">ITIS3135</a></li>
-          <li><a href="https://www.linkedin.com/in/loui-abdul-fattah-4b532b365/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.linkedin.com/in/loui-abdul-fattah-4b532b365/" target="_blank"
+              rel="noopener">LinkedIn</a></li>
         </ul>
       </nav>
 
@@ -168,29 +256,24 @@
           &nbsp;•&nbsp;
           <a href="https://validator.w3.org/nu/#textarea" target="_blank" rel="noopener">HTML Validator</a>
           &nbsp;•&nbsp;
-          <a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank" rel="noopener">CSS Validator</a>
+          <a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank" rel="noopener">CSS
+            Validator</a>
         </small>
         <div class="legal"><small>© <span id="year"></span> Loiy Abdul-Fattah • Built with semantic HTML5</small></div>
       </div>
     </footer>
   </div>
 
-  <!-- Tiny helpers: set dynamic title (h1 | h2) and current year -->
-  <script>
-	(function(){
-	  // Set the page title from h1 and h2
-	  var h1El = document.querySelector('h1');
-	  var h2El = document.querySelector('h2');
-	  if (h1El && h2El) {
-		document.title = h1El.textContent.trim() + " | " + h2El.textContent.trim();
-	  }
-  
-	  // Set current year in footer
-	  var y = document.getElementById('year');
-	  if (y) {
-		y.textContent = new Date().getFullYear();
-	  }
-	})();
-  </script>
+  <p>
+    <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+      <img style="border:0;width:88px;height:31px"
+        src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+    </a>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+      <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss"
+        alt="Valid CSS!">
+    </a>
+  </p>
 </body>
+
 </html>
