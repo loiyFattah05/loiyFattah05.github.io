@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fattah Enterprises — Web Design & Development</title>
+    <meta name="description"
+        content="Fattah Enterprises: bright, accessible web design & development by Loiy Abdul-Fattah.">
+
+    <!-- Color palette via Coolors (keep this URL in the comment):
+       https://coolors.co/ffffff-1f2937-f8fafc-2d7dd2-1b998b-f2c14e-f78154
+       Bright light theme: deep slate text on white, cheerful blue/teal/yellow/coral accents. -->
+
+    <style>
+        :root {
+            --ink: #1F2937;
+            /* primary text (deep slate) */
+            --ink-muted: #475569;
+            /* muted text */
+            --bg: #FFFFFF;
+            /* white background */
+            --panel: #F8FAFC;
+            /* soft card background */
+            --border: #E5E7EB;
+            /* light borders */
+            --brand: #2D7DD2;
+            /* vivid blue */
+            --teal: #1B998B;
+            /* teal accent */
+            --gold: #F2C14E;
+            /* golden accent */
+            --coral: #F78154;
+            /* coral accent */
+            --ring: rgba(45, 125, 210, .45);
+            --shadow: 0 10px 25px rgba(20, 35, 70, .08);
+            --radius: 14px;
+            --gap: 1rem;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif
+        }
+
+        a {
+            color: var(--brand);
+            text-decoration-thickness: .1em;
+            text-underline-offset: .18em
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        a:focus-visible {
+            outline: 3px solid var(--ring);
+            outline-offset: 2px;
+            border-radius: 8px
+        }
+
+        /* Header: bright bar with subtle gradient accent line */
+        header {
+            display: flex;
+            align-items: center;
+            gap: var(--gap);
+            padding: 1.25rem 1rem;
+            background: linear-gradient(180deg, #fff 0%, #fff 70%, #f3f7ff 100%);
+            border-bottom: 3px solid rgba(45, 125, 210, .15)
+        }
+
+        .logo {
+            
+            border-radius: 18px;
+            flex: 0 0 auto;
+            border: 3px solid #ECF2FF;
+            box-shadow: var(--shadow)
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+            color: #0f1f3a
+        }
+
+        .tagline {
+            margin: .3rem 0 0;
+            font-size: 1.05rem;
+            color: var(--ink-muted)
+        }
+
+        /* Layout */
+        main {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            display: grid;
+            gap: 1.5rem
+        }
+
+        section {
+            background: var(--panel);
+            padding: 1.1rem 1.25rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow)
+        }
+
+        h2 {
+            font-size: 1.45rem;
+            margin: .25rem 0 1rem;
+            color: #0f2f66
+        }
+
+        /* Brighter “non-standard” bullets with alternating colors */
+        ul.features {
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+
+        ul.features li {
+            position: relative;
+            padding-left: 1.7rem;
+            margin: .6rem 0
+        }
+
+        ul.features li::before {
+            content: "✺";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 900;
+            line-height: 1.2;
+            color: var(--gold)
+        }
+
+        ul.features li:nth-child(2n)::before {
+            color: var(--teal)
+        }
+
+        ul.features li:nth-child(3n)::before {
+            color: var(--coral)
+        }
+
+        ul.features li:nth-child(5n)::before {
+            color: var(--brand)
+        }
+
+        /* Contact block is bright and clear */
+        address {
+            font-style: normal;
+            background: #fff;
+            border: 2px solid rgba(27, 153, 139, .15);
+            box-shadow: var(--shadow);
+            border-left: 6px solid var(--teal);
+            padding: .9rem 1rem;
+            border-radius: 12px
+        }
+
+        /* Footer: clean, airy */
+        footer {
+            margin-top: 1rem;
+            background: #fff;
+            border-top: 3px solid rgba(27, 153, 139, .18)
+        }
+
+        footer .wrap {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 1rem
+        }
+
+        footer nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: .6rem;
+            padding: 0;
+            margin: 0 0 .6rem
+        }
+
+        footer nav a {
+            padding: .25rem .6rem;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: #fff
+        }
+
+        small {
+            color: var(--ink-muted)
+        }
+
+        /* Subtle emphasis chips */
+        .chip {
+            display: inline-block;
+            padding: .15rem .5rem;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: #fff;
+            color: var(--ink-muted);
+            font-size: .88rem
+        }
+    </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <!-- Logo note: ensure this file is resized externally to exactly 96×96 px -->
+        <img class="logo" src="images/Logo.png" alt="FE monogram logo for Fattah Enterprises" width="96"
+            height="96"/>
+
+        <div>
+            <h1>Fattah Enterprises</h1>
+            <p class="tagline">Bright ideas, beautifully shipped. <span class="chip">WCAG-friendly</span> <span
+                    class="chip">Mobile-first</span></p>
+        </div>
+    </header>
+
+    <main>
+        <section id="services">
+            <h2>Fattah Enterprises Services</h2>
+            <p>
+                Fattah Enterprises is a cheerful, detail-driven studio led by Loiy Abdul-Fattah.
+                I build fast, accessible, and clearly structured websites—with color systems and type scales that feel
+                fresh and stay readable.
+            </p>
+
+            <ul class="features">
+                <li>Accessibility-first build (semantic HTML, keyboard flows, color contrast)</li>
+                <li>Mobile-first responsive layouts (grid/flex that scale gracefully)</li>
+                <li>Performance-minded assets (compressed images, lazy-load where appropriate)</li>
+                <li>Structured components with comments and tidy file trees</li>
+                <li>Solid metadata and headings for search clarity</li>
+                <li>HTML & CSS validation before delivery</li>
+                <li>Git workflow with transparent milestones</li>
+                <li>Friendly maintenance and iteration post-launch</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Let’s build something bright</h2>
+            <p>
+                Share your goals and audience, and I’ll propose a simple scope, timeline, and a color-contrast-checked
+                design system.
+                Every decision is practical, readable, and maintainable.
+            </p>
+
+            <address>
+                <strong>Contact</strong><br />
+                Email: <a href="mailto:loayfattah1@hotmail.com">loayfattah1@hotmail.com</a><br />
+                Phone: <a href="tel:+1-980-555-0133">+1 (980) 555-0133</a><br />
+                Studio: 123 Innovation Way, Charlotte, NC 28223
+            </address>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <nav aria-label="Page links">
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <small>© 2025 Fattah Enterprises • Design you can ship.</small>
+        </div>
+    </footer>
+</body>
+
+</html>
