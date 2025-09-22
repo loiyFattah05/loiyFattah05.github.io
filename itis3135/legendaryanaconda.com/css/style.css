@@ -95,7 +95,7 @@
     display: block;
   }
   
-  .product figcaption h4 { margin: .5rem 0 0; font-size: 1rem; }
+  .product figcaption { margin: .5rem 0 0; font-size: 1rem; }
   .product-body p { margin: 0 0 .5rem; }
   .price { font-weight: 700; }
   
