@@ -1,30 +1,24 @@
 :root {
-    --bg: #0f172a;
-    /* page background */
-    --paper: #ffffff10;
-    /* translucent card */
+    --bg: #0f172a;              /* page background */
+    --paper: #ffffff10;         /* translucent card */
     --border: #ffffff1a;
-    --ink: #e5e7eb;
-    /* base text */
-    --accent: #8b5cf6;
-    /* purple accent */
-    --muted: #94a3b8;
-    /* footer text */
-    --link: #ffd166;
-    /* link color */
+    --ink: #e5e7eb;            /* base text */
+    --accent: #8b5cf6;         /* purple accent */
+    --muted: #94a3b8;         /* footer text */
+    --link: #ffd166;          /* link color */
     --link-visited: #ffb703;
     --footer-link: #a3e635;
     --footer-visited: #84cc16;
 }
 
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 html,
 body {
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 body {
@@ -62,7 +56,7 @@ footer {
 
 h1 {
     font-size: 1.6rem;
-    margin: .5rem 0 0
+    margin: .5rem 0 0;
 }
 
 h2 {
@@ -71,8 +65,9 @@ h2 {
     color: var(--accent);
 }
 
+/* Navigation links */
 nav a {
-    color: var(--link);
+    color: white;
     text-decoration: none;
     padding: .15rem .25rem;
 }
@@ -87,15 +82,31 @@ nav a:visited {
 
 .sep {
     color: #64748b;
-    padding: 0 .25rem
+    padding: 0 .25rem;
 }
 
+/* Main content box */
 main {
     background: var(--paper);
     border: 1px solid var(--border);
     border-radius: .5rem;
 }
 
+/* Main section links — fix for purple visited links */
+main a {
+    color: white;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+main a:visited {
+    color: white; /* stays white even after visiting */
+}
+
+/* Footer */
 footer {
     font-size: .95rem;
     color: var(--muted);
