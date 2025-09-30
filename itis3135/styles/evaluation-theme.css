@@ -1,0 +1,83 @@
+/* ======================
+   Website Evaluations Theme
+   ====================== */
+
+   :root {
+    --bg: #1a1a1d;
+    --panel: #2a2a2e;
+    --text: #ffffff;
+    --muted: #cccccc;
+    --accent: #00c2ff;
+    --line: #3c3c42;
+    --radius: 12px;
+  }
+  
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: var(--panel);
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 2px solid var(--line);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    color: var(--muted);
+    margin-top: 0.5rem;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  section {
+    background: var(--panel);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--line);
+  }
+  
+  section h2 a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  
+  section h2 a:hover {
+    text-decoration: underline;
+  }
+  
+  ul {
+    padding-left: 1.25rem;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--panel);
+    border-top: 2px solid var(--line);
+    margin-top: 2rem;
+  }
+  
+  footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
