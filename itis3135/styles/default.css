@@ -1,11 +1,17 @@
 :root {
-    --bg: #0f172a;              /* page background */
-    --paper: #ffffff10;         /* translucent card */
+    --bg: #0f172a;
+    /* page background */
+    --paper: #ffffff10;
+    /* translucent card */
     --border: #ffffff1a;
-    --ink: #e5e7eb;            /* base text */
-    --accent: #8b5cf6;         /* purple accent */
-    --muted: #94a3b8;         /* footer text */
-    --link: #ffd166;          /* link color */
+    --ink: #e5e7eb;
+    /* base text */
+    --accent: #8b5cf6;
+    /* purple accent */
+    --muted: #94a3b8;
+    /* footer text */
+    --link: #ffd166;
+    /* link color */
     --link-visited: #ffb703;
     --footer-link: #a3e635;
     --footer-visited: #84cc16;
@@ -103,7 +109,8 @@ main a:hover {
 }
 
 main a:visited {
-    color: white; /* stays white even after visiting */
+    color: white;
+    /* stays white even after visiting */
 }
 
 /* Footer */
@@ -118,4 +125,70 @@ footer a {
 
 footer a:visited {
     color: var(--footer-visited);
+}
+
+/* ===============================
+   Table Styling
+   =============================== */
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0b1225;
+    border: 1px solid var(--border);
+}
+
+caption {
+    display: table-caption;
+    caption-side: top;
+    padding: .5rem .75rem;
+    font-weight: 600;
+    color: var(--ink);
+    text-align: left;
+}
+
+thead th {
+    text-align: left;
+    padding: .5rem .75rem;
+    border-bottom: 1px solid var(--border);
+    background: #111827;
+}
+
+tbody th,
+tbody td {
+    padding: .5rem .75rem;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border);
+}
+
+td.steps,
+th.steps {
+    width: 6rem;
+    white-space: nowrap;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+td ul {
+    margin: .25rem 0 .5rem 1rem;
+    padding: 0;
+}
+
+tbody tr:nth-child(even) {
+    background: #0d162d;
+}
+
+/* Add vertical separator lines between columns */
+th,
+td {
+    border-right: 1px solid var(--border);
+}
+
+th:last-child,
+td:last-child {
+    border-right: none;
+    /* remove the line on the far right edge */
 }
