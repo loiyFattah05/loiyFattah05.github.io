@@ -192,3 +192,31 @@ td:last-child {
     border-right: none;
     /* remove the line on the far right edge */
 }
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Three-device responsiveness (adjust variables, not the headings) */
+@media (max-width: 640px) {
+    :root {
+        --h1: 1.35rem;
+        --h2: 1.1rem;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    :root {
+        --h1: 1.75rem;
+        --h2: 1.25rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    :root {
+        --h1: 2rem;
+        --h2: 1.35rem;
+    }
+}
