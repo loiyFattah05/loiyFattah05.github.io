@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ITIS3135 | Loui Abdul-Fattah | Legendary Anaconda | Introduction Form</title>
+
+    <link rel="stylesheet" href="styles/default.css" />
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="intro-page">
+    <div data-include="components/header.html"></div>
+
+    <main id="main">
+        <h2> Introduction Form </h2>
+        <h3>Please submit the form below.</h3>
+
+        <form id="introForm">
+            <label>First Name: <input type="text" id="firstName" value="Loiy" required></label><br>
+            <label>Middle Name: <input type="text" id="middleName" value="B."></label><br>
+            <label>Last Name: <input type="text" id="lastName" value="Abdul-Fattah" required></label><br>
+            <label>Preferred Name: <input type="text" id="nickname" value="Loui"></label><br>
+            <label>Mascot Adjective: <input type="text" id="mascotAdj" value="Legendary" required></label><br>
+            <label>Mascot Animal: <input type="text" id="mascotAnimal" value="Anaconda" required></label><br><br>
+
+            <label>Picture:</label><br>
+            <figure>
+                <img id="previewImage" src="images/Introduction.jpg" alt="Photo of Loiy Abdul-Fattah" width="250">
+            </figure>
+            <input type="file" id="picture" accept="image/*"><br>
+            <label>Caption:</label>
+            <input type="text" id="caption" value="Sister's Wedding"><br><br>
+
+            <label>Personal Statement:</label><br>
+            <textarea id="personalStatement" rows="3"
+                required>A fellow immigrant trying to live the “American dream.” I moved here in 2020 — and the rest is history. I’m a Computer Science major concentrating in Cyber Security, hoping I don’t end up homeless 😂. I love going to the fields to play Futball with friends and joining tournaments with them.</textarea><br><br>
+
+            <label>Personal Background:</label><br>
+            <textarea id="personalBackground" rows="3"
+                required>I was born and raised almost my entire life in Jordan, a small country in the Middle East. I speak Arabic fluently and my English is pretty good too! My family and I moved to Charlotte, NC in 2020 to be near our family and have been here ever since.</textarea><br><br>
+
+            <label>Professional Background:</label><br>
+            <textarea id="professionalBackground" rows="3"
+                required>I started working when I was 16 helping my dad at his factory during the summer. Later, I worked at Target for two and a half years, and now I’m working at Domino’s — but I’m looking for something new soon!</textarea><br><br>
+
+            <label>Academic Background:</label><br>
+            <textarea id="academicBackground" rows="2"
+                required>I’m a junior majoring in Computer Science with a concentration in Cyber Security at UNC Charlotte.</textarea><br><br>
+
+            <label>Courses I’m Taking & Why:</label>
+            <div id="courseList">
+                <div class="course">
+                    <input type="text" placeholder="Department" value="CJUS" class="dept">
+                    <input type="text" placeholder="Number" value="1511" class="num">
+                    <input type="text" placeholder="Name" value="Local Social Science" class="name">
+                    <input type="text" placeholder="Reason" value="Easy elective class to fill in credits"
+                        class="reason">
+                    <button type="button" class="deleteCourse">❌</button>
+                </div>
+                <div class="course">
+                    <input type="text" placeholder="Department" value="ITIS" class="dept">
+                    <input type="text" placeholder="Number" value="3135" class="num">
+                    <input type="text" placeholder="Name" value="Front-End Web App Development" class="name">
+                    <input type="text" placeholder="Reason" value="Required in my concentration" class="reason">
+                    <button type="button" class="deleteCourse">❌</button>
+                </div>
+                <div class="course">
+                    <input type="text" placeholder="Department" value="ITSC" class="dept">
+                    <input type="text" placeholder="Number" value="3146" class="num">
+                    <input type="text" placeholder="Name" value="Operating Systems & Networking" class="name">
+                    <input type="text" placeholder="Reason" value="Required in my major" class="reason">
+                    <button type="button" class="deleteCourse">❌</button>
+                </div>
+                <div class="course">
+                    <input type="text" placeholder="Department" value="ITSC" class="dept">
+                    <input type="text" placeholder="Number" value="3688" class="num">
+                    <input type="text" placeholder="Name" value="Computers and Their Impact on Society" class="name">
+                    <input type="text" placeholder="Reason" value="Suggested by my advisor" class="reason">
+                    <button type="button" class="deleteCourse">❌</button>
+                </div>
+                <div class="course">
+                    <input type="text" placeholder="Department" value="STAT" class="dept">
+                    <input type="text" placeholder="Number" value="2122" class="num">
+                    <input type="text" placeholder="Name" value="Intro to Probability and Statistics" class="name">
+                    <input type="text" placeholder="Reason" value="Required in my major" class="reason">
+                    <button type="button" class="deleteCourse">❌</button>
+                </div>
+            </div>
+            <button type="button" id="addCourse">➕ Add Course</button><br><br>
+
+            <label>Funny / Interesting Fact:</label><br>
+            <textarea id="funnyFact"
+                rows="2">When I was younger, I thought the hazard button in a car meant it would split in half since both turn signals would flash 😂.</textarea><br><br>
+
+            <label>Favorite Quote:</label><br>
+            <input type="text" id="quote" value="I’ve failed over and over again in my life and that is why I succeed."
+                required><br>
+            <label>Quote Author:</label>
+            <input type="text" id="quoteAuthor" value="Michael Jordan" required><br><br>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <button type="button" id="clearBtn">Clear</button>
+        </form>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/introduction.js"></script>
+</body>
+
+</html>

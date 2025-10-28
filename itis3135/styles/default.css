@@ -220,3 +220,117 @@ main {
         --h2: 1.35rem;
     }
 }
+
+/* Scope all these styles only to #intro-page */
+#intro-page main {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: auto;
+}
+
+#intro-page main p::before {
+    content: "• ";
+    font-weight: bold;
+    color: greenyellow;
+}
+
+#intro-page main p.quote::before,
+#intro-page ol::before {
+    content: "";
+}
+
+#intro-page figure {
+    text-align: center;
+    margin: 20px auto;
+}
+
+#intro-page figure img {
+    display: black;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+#intro-page figure figcaption {
+    font-style: italic;
+    color: white;
+    margin-top: 5px;
+}
+
+#intro-page .quote {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.1rem;
+    margin: 30px 0;
+}
+
+#intro-page ol {
+    margin-left: 25px;
+}
+
+/* ---------- FORM BUTTON STYLING ---------- */
+button {
+    background-color: #2e8b57;
+    /* nice green - you can change to your brand color */
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    margin: 6px 4px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.25s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #256b46;
+    /* darker on hover */
+    transform: translateY(-2px);
+    /* subtle lift */
+}
+
+button:active {
+    background-color: #1f553a;
+    /* even darker when pressed */
+    transform: translateY(0);
+}
+
+button[type="reset"] {
+    background-color: #555;
+    /* neutral gray for reset */
+}
+
+button[type="reset"]:hover {
+    background-color: #333;
+}
+
+button[type="button"] {
+    background-color: #8b0000;
+    /* red tone for clear button */
+}
+
+button[type="button"]:hover {
+    background-color: #a40000;
+}
+
+/* Make Add Course button same green */
+#addCourse {
+    background-color: #2e8b57;
+    color: white;
+}
+
+#addCourse:hover {
+    background-color: #256b46;
+    /* slightly darker on hover */
+}
+
+#addCourse:active {
+    background-color: #1f553a;
+    /* darkest when pressed */
+}
+
+/* Left-align the preview image on the form page only */
+#introForm figure {
+    text-align: left;
+    margin-left: 0;
+}
