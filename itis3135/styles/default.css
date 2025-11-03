@@ -269,6 +269,22 @@ main {
 }
 
 /* ---------- FORM BUTTON STYLING ---------- */
+/* Stack labels & inputs vertically for intro form */
+#introForm label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600; /* optional but looks cleaner */
+}
+
+/* Add spacing under inputs/textarea */
+#introForm input[type="text"],
+#introForm textarea {
+    display: block;
+    width: 100%;
+    max-width: 450px; /* optional: keeps form from being huge */
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
 button {
     background-color: #2e8b57;
     /* nice green - you can change to your brand color */
@@ -327,6 +343,20 @@ button[type="button"]:hover {
 #addCourse:active {
     background-color: #1f553a;
     /* darkest when pressed */
+}
+#generateJSON {
+    background-color: #555;
+    color: white;
+}
+#generateJSON:hover {
+    background-color: #333;
+}
+#generateHTML {
+    background-color: #555;
+    color: white;
+}
+#generateHTML:hover{
+    background-color: #333;
 }
 
 /* Left-align the preview image on the form page only */
