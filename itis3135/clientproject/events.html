@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PCO | Events</title>
+    <link rel="stylesheet" href="styles/client.css" />
+    <script src="scripts/HTMLInclude.min.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="events-page">
+    <div data-include="components/header.html"></div>
+
+    <main class="content-page">
+        <div class="page-wrapper">
+
+            <h2>Upcoming Events</h2>
+
+            <div class="events-grid">
+
+                <div class="event-card" data-event="fundraiser">
+                    <h3 class="event-title">Through The Lens Of Palestinians</h3>
+
+                    <div class="poster-container">
+                        <img
+                            src="images/Throughthelens.jpg"
+                            class="event-poster"
+                            alt="Through The Lens Of Palestinians"
+                        />
+                        <div class="poster-overlay">Click to Learn More</div>
+                    </div>
+
+                    <div class="event-info">
+                        <p><strong>Date:</strong> November 22nd</p>
+                        <p><strong>Location:</strong> Al-Nour Community Center</p>
+                        <p><strong>Description:</strong> Join us for a night where we would have a Guest Speaker, Screening, Auction of Arts from refugees camps, and Dinner.</p>
+                        <p><strong>Buy Your Ticket:</strong> <a href="https://www.tickettailor.com/events/palestinianculturalorganization/1862430" target="_blank">Click Here</a></p>
+                    </div>
+                </div>
+
+                <!-- Extra future events commented out are fine to leave -->
+
+            </div>
+
+            <h2 style="margin-top: 3rem;">Past Events</h2>
+
+            <div class="events-grid past-events">
+                <div class="event-card">
+                    <h3 class="event-title">ASO X PCO Soccer tournament</h3>
+
+                    <div class="poster-container">
+                        <img src="images/Soccer.jpg" class="event-poster" alt="Past Event" />
+                        <div class="poster-overlay">Click to Learn More</div>
+                    </div>
+
+                    <div class="event-info">
+                        <p><strong>Description:</strong> Our 2025 Fundraiser Soccer tournament, all funds went to Palestine and Sudan.</p>
+                        <a
+                            href="https://drive.google.com/drive/folders/1h2mpZzS4g_jIhDyQB5yXhcq6V1QYXXhq?fbclid=PAdGRleAOFykxleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQIY2FsbHNpdGUCMTUAAafD-4FFaq5PbNA2dIpdd-IwSk88X5O0MVEmYVXyP-87GC5YuL36W2HXIWwKqw_aem_FEapMsDKX_RhrkRBEWj7kA"
+                            target="_blank"
+                            class="photo-button"
+                        >View Photos</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="event-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/client.js"></script>
+</body>
+</html>

@@ -1,0 +1,529 @@
+
+/* ============================= */
+/* HEADER + FOOTER STYLING */
+/* ============================= */
+
+/* Logo + Title row */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+}
+
+/* Logo styling */
+.header-logo {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+.site-header {
+  background-color: #0f0f0f;
+  color: white;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+.header-container {
+  padding: 1.5rem 0;
+}
+
+.site-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #d81e05;
+  border-bottom: 2px solid #d81e05;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: #d81e05;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #006341;
+}
+
+/* ============================= */
+/* SHARED LAYOUT */
+/* ============================= */
+
+/* All non-home pages */
+body:not(#home-page) {
+  background-color: #0a0a0a;
+  color: white;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.content-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Wrapper used by all pages */
+.page-wrapper {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 3px solid transparent;
+  border-image: linear-gradient(
+    to right,
+    #000000 20%,
+    #d81e05 40%,
+    #ffffff 60%,
+    #006341 80%
+  );
+  border-image-slice: 1;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  max-width: 900px;
+  /* width removed to satisfy linter (layout still fine) */
+  padding: 3rem 2rem;
+  text-align: left;
+}
+
+/* Headings now use a class instead of qualified h2 */
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+.page-wrapper p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #eaeaea;
+  margin-bottom: 1.5rem;
+}
+
+.page-wrapper strong {
+  color: #d81e05;
+}
+
+/* Images inside content (where used) */
+.page-wrapper img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto 0;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-wrapper img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 35px rgba(216, 30, 5, 0.4);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  body:not(#home-page) {
+    padding: 6vh 1rem;
+  }
+
+  .page-wrapper {
+    padding: 2rem 1.2rem;
+    text-align: center;
+  }
+
+  .page-title {
+    font-size: 1.7rem;
+  }
+
+  .page-wrapper p {
+    font-size: 1rem;
+  }
+
+  .page-wrapper img {
+    max-width: 320px;
+  }
+}
+
+/* ============================= */
+/* HOME PAGE */
+/* ============================= */
+
+#home-page {
+  background-color: #0a0a0a;
+  color: white;
+}
+
+/* Home wrapper uses same style as others */
+#home-page .page-wrapper {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 3px solid transparent;
+  border-image: linear-gradient(
+    to right,
+    #000000 20%,
+    #d81e05 40%,
+    #ffffff 60%,
+    #006341 80%
+  );
+  border-image-slice: 1;
+  border-radius: 15px;
+  max-width: 900px;
+  /* width removed here too, max-width keeps layout */
+  padding: 3rem 2rem;
+  margin: 5rem auto;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Intro paragraph */
+.home-intro {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  max-width: 750px;
+  margin: 0 auto 2rem;
+}
+
+/* Mission paragraph */
+.home-mission {
+  max-width: 750px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+
+/* Featured event poster */
+.home-feature-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.home-feature-poster {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: contain;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease;
+}
+
+.home-feature-container:hover .home-feature-poster {
+  transform: scale(1.03);
+}
+
+/* ============================= */
+/* MEET THE BOARD */
+/* ============================= */
+
+.member-info {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: left;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Shown by JS – no adjoining classes, no !important */
+.show-info {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.85);
+  opacity: 1;
+  visibility: visible;
+  max-height: 500px;
+}
+
+/* Board member photo */
+.board-member img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* fake "border" using box-shadow so no width+border warning */
+  box-shadow:
+    0 0 0 3px #006341,
+    0 0 12px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================= */
+/* EVENTS */
+/* ============================= */
+
+/* Event card */
+.event-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 3px solid transparent;
+  border-image: linear-gradient(
+    to right,
+    #000000 20%,
+    #d81e05 40%,
+    #ffffff 60%,
+    #006341 80%
+  );
+  border-image-slice: 1;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  margin: 1rem;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgba(216, 30, 5, 0.5);
+
+}
+
+/* Poster and hover overlay */
+.poster-container {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.event-poster {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.poster-container:hover .event-poster {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.poster-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  opacity: 0;
+  border-radius: 12px;
+  transition: opacity 0.3s ease;
+}
+
+.poster-container:hover .poster-overlay {
+  opacity: 1;
+}
+
+/* Hidden until JS puts it in modal */
+.event-info {
+  display: none;
+}
+
+/* Past events grayscale */
+.past-events .event-poster {
+  filter: grayscale(60%);
+}
+
+.past-events .event-card:hover .event-poster {
+  filter: grayscale(0%);
+}
+
+/* ============================= */
+/* MODAL (used by events) */
+/* ============================= */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* No adjoining classes: use separate class for "shown" state */
+.modal-visible {
+  display: flex;
+}
+
+.modal-content {
+  background-color: #111;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 600px;
+  /* width removed to satisfy linter; max-width keeps shape */
+  color: white;
+  border: 2px solid #d81e05;
+  box-shadow: 0 0 25px rgba(216, 30, 5, 0.4);
+  position: relative;
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.modal .close:hover {
+  color: #d81e05;
+}
+
+/* ============================= */
+/* SPONSOR PAGE */
+/* ============================= */
+
+#sponsor-page {
+  background-color: #0a0a0a;
+  color: white;
+}
+
+/* Sponsor cards */
+.sponsor-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 3px solid transparent;
+  border-image: linear-gradient(
+    to right,
+    #000000 20%,
+    #d81e05 40%,
+    #ffffff 60%,
+    #006341 80%
+  );
+  border-image-slice: 1;
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sponsor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgba(216, 30, 5, 0.5);
+}
+
+.sponsor-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Contact line */
+.sponsor-contact {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #eaeaea;
+}
+
+.sponsor-contact a {
+  color: #d81e05;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sponsor-contact a:hover {
+  color: #006341;
+}
+
+/* ============================= */
+/* CONTACT PAGE */
+/* ============================= */
+
+#contact-page {
+  background-color: #0a0a0a;
+  color: white;
+}
+
+.contact-line {
+  text-align: left;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.contact-email {
+  color: #d81e05;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-email:hover {
+  color: #006341;
+}
+
+.social-section {
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.instagram-link {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.instagram-link:hover {
+  color: #d81e05;
+}
+
+.instagram-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+  vertical-align: middle;
+  transition: 0.3s ease;
+}
+
+.instagram-link:hover .instagram-icon {
+  fill: #d81e05;
+}
