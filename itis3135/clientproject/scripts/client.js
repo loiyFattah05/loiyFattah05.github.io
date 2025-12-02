@@ -68,19 +68,19 @@ function initEventModal() {
         ${info.innerHTML}
       `;
 
-      modal.classList.add("visible");
+      modal.classList.add("modal-visible");
     });
   });
 
   // Close modal on X button
   modalClose.addEventListener("click", () => {
-    modal.classList.remove("visible");
+    modal.classList.remove("modal-visible");
   });
 
   // Close modal when clicking outside modal content
   modal.addEventListener("click", (e) => {
     if (e.target === modal) {
-      modal.classList.remove("visible");
+      modal.classList.remove("modal-visible");
     }
   });
 }
